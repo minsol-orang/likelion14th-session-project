@@ -16,15 +16,15 @@ const Filter = styled.div`
   margin-top : 22px;
 `;
 
-export default function FilterBar() {
-    return(
+export default function FilterBar({ openModal }) {
+      return(
         <>
           <Filter>
-            <Button>성별<Icon src={downUrl} /></Button>
-            <Button>색상<Icon src={downUrl} /></Button>
-            <Button>사이즈<Icon src={downUrl} /></Button>
-            <Button>가격대<Icon src={downUrl} /></Button>
-            <Button>종류<Icon src={downUrl} /></Button>
+            <Button onClick={() => openModal("성별")}> 성별 <Icon src={downUrl} /></Button>
+            <Button onClick={() => openModal("색상")}>  색상 <Icon src={downUrl} /></Button>
+            <Button onClick={() => openModal("사이즈")}>사이즈<Icon src={downUrl} /></Button>
+            <Button onClick={() => openModal("가격대")}>가격대<Icon src={downUrl} /></Button>
+            <Button onClick={() => openModal("종류")}>종류<Icon src={downUrl} /></Button>
           </Filter>
         </>
     );

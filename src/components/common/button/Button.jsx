@@ -15,6 +15,11 @@ const Button  = styled.button`
   display: flex;
   align-items: center;
   gap : 5px;
+
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  min-width: 58px;
 `;
 export default Button;
 
