@@ -3,6 +3,8 @@ import FilterBar from "../../components/filter/FilterBar";
 import SortButton from "../../components/sort/SortButton";
 import { useState } from "react";
 import FilterModal from "../../components/filter/FilterModal";
+import ProductList from "../../components/product/ProductList";
+
 
 export default function Main(){
   const [modal, setModal] = useState(null);
@@ -12,7 +14,7 @@ export default function Main(){
       <FilterBar openModal={setModal} />
       {modal && <FilterModal type={modal} onClose={() => setModal(null)} /> }
       <SortButton />
-      <div>제품 목록</div>
+      <ProductList />
     </div>
   );
 }

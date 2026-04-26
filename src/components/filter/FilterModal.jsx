@@ -2,7 +2,9 @@ import styled from "styled-components";
 import Button from "../common/button/Button";
 import closeUrl from "../../assets/icons/close_icon.svg";
 
+
 const ModalBox = styled.div`
+min-width: 294px;
   width: fit-content;
     background-color: white;
   padding: 30px 33px 48px 35px;
@@ -44,23 +46,22 @@ const ModalHeader = styled.div`
 
 const OptionBox = styled.div`
   display: ${(props) => {
-    if (props.$type === "사이즈" || props.$type === "색상") {
-      return "grid";
+    if (props.$type === '사이즈' || props.$type === '색상') {
+      return 'grid';
     }
-    return "flex"; 
+    return 'flex';
   }};
 
   flex-wrap: wrap;
 
   grid-template-columns: ${(props) => {
-    if (props.$type === "사이즈") return "1fr 1fr 1fr 1fr";
-    if (props.$type === "색상") return "1fr 1fr 1fr";
-    return "none"; 
+    if (props.$type === '사이즈') return 'repeat(4, auto)';
+    if (props.$type === '색상') return 'repeat(3, auto)';
+    return 'none';
   }};
 
-  gap: 14px;
+  gap: 12px;
   margin-top: 20px;
-
   justify-items: start;
 `;
 

@@ -12,8 +12,10 @@ const Filter = styled.div`
   height : 33px;
   display : flex;
   gap : 13px;
-  margin-left: 153px;
   margin-top : 22px;
+  margin-left : 153px;
+
+
 `;
 
 export default function FilterBar({ openModal }) {
